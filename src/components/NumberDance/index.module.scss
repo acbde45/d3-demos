@@ -1,0 +1,21 @@
+.container {
+  @apply h-full;
+  :global {
+    text {
+      font-family: monospace;
+      @apply font-bold text-5xl;
+    }
+
+    .enter {
+      @apply fill-current text-green-500;
+    }
+
+    .update {
+      @apply fill-current text-black;
+    }
+
+    .exit {
+      @apply fill-current text-red-500;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  @apply h-full w-full flex flex-col divide-y;
+  .header {
+    @apply w-full h-16;
+  }
+  .main {
+    @apply h-full w-full flex flex-row divide-x;
+  }
+  .sidebar {
+    @apply w-60;
+  }
+  .content {
+    @apply p-4 flex-1;
+  }
+}
