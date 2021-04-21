@@ -38,16 +38,17 @@ export default React.memo(function({ max = 90000 }: IProps) {
   React.useEffect(() => {
     const mainSvg = d3.select('#svg');
     const g = mainSvg.append('g').attr('transform', 'translate(32, 200)');
+    let requestId: any;
     const step = () => {
       danceNumber.current += (danceNumber.current + '').length;
       update(g, toCharArray(danceNumber.current));
       if (danceNumber.current > max) {
         update(g, toCharArray(max));
       } else if (danceNumber.current < max) {
-        requestAnimationFrame(step);
+        requestId = requestAnimationFrame(step);
       }
     };
-    const requestId = requestAnimationFrame(step);
+    requestId = requestAnimationFrame(step);
     return () => {
       g.remove();
       cancelAnimationFrame(requestId);

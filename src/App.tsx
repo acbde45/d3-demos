@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Layout from './Layout/DisplayLayout';
 import CodeDance from './components/CodeDance';
 import NumberDance from './components/NumberDance';
+import AccordionFlow from './components/AccordionFlow';
 
 const routes = [
   { name: '字符跳动', path: '/codedance', component: CodeDance },
   { name: '数字跳动', path: '/numberdance', component: NumberDance },
+  { name: '故事线', path: '/accordionflow', component: AccordionFlow },
 ];
 
 function App() {
